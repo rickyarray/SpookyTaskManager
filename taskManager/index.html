@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" >
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Creepster&family=Lato:ital,wght@1,300&display=swap');
+      </style>
+    <link href="./styles/mystyle.css" rel="stylesheet" />
+    
+    <title>Tasks</title>
+  </head>
+  <body>
+    <h1>Super Spooky Task Manager</h1>
+
+    <main>
+      <section id="list">
+
+      <button id="btnDetails" class="btn btn-outline-primary">Show/Hide details</button>
+
+    <div class="pending-tasks">
+        <!-- add tasks to be rendered here -->
+    </div>
+</section>
+      <section id="form">
+
+        <!-- <div class="mt-3">
+            <i id="iNotImportant" class="fas fa-circle"></i>
+        </div> -->
+        
+        <div class="mt-3 icon-container">
+            <i id="iImportant" class="fas fa-exclamation-circle important-icon"></i>
+            <span class="icon-hint"> Mark as Important</span>
+        </div>
+
+        <div class="mt-3">
+            <label for="title" class="form-label">Title:</label>
+            <input type="text" class="form-control" id="txtTitle" name="title" placeholder="Task to complete ..." required>
+        </div>
+
+        <div class="mt-3">
+            <label for="description" class="form-label">Description:</label>
+            <textarea class="form-control" id="txtDescription" name="txtDescription" placeholder="Type description here ..." required></textarea>
+        </div>
+
+        <div class="mt-3">
+            <label for="color" class="form-label">Color:</label>
+            <input type="color" class="form-control" id="selColor" name="color" required>
+        </div>
+
+        <div class="mt-3">
+            <label for="start" class="form-label">Start Date:</label>
+            <input type="date" class="form-control" id="selDate" name="start" placeholder="Select a start date" required>
+        </div>
+
+        <div class="mt-3">
+            <label for="status" class="form-label">Status:</label>
+            <select class="form-control" id="selStatus" name="selStatus" required>
+                <option value="New">New</option>
+                <option value="In progress">In progress</option>
+                <option value="Completed">Completed</option>
+                <option value="Canceled">Canceled</option>
+            </select>
+        </div>
+
+        <div class="mt-3">
+            <label for="budget" class="form-label">Budget:</label>
+            <input type="number" class="form-control" id="txtBudget" placeholder="What is your budget?" name="budget" required>
+        </div>
+
+        <button id="btnSave" class="btn btn-dark">Save Task</button>
+      </section>
+    </main>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="./scripts/task.js"></script>
+    <script src="./scripts/app.js"></script>
+  </body>
+</html>
